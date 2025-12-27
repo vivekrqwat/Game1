@@ -158,7 +158,7 @@ this.createAnimalAnimations();
     
     // Store in players object
     this.players[playerData.id] = this.player;
-    
+    this.player.setScale(1,1.09)
     // Initialize last position
     this.lastPosition = { x: playerData.x, y: playerData.y };
   }
@@ -176,6 +176,7 @@ this.createAnimalAnimations();
     
     // Create other player (no physics needed for remote players)
     const other = this.add.sprite(playerData.x, playerData.y, `${this.char||"boy"}`, "walk-down-3.png");
+  other.setScale(1,1.09)
     
     // Store in players object
     this.players[playerData.id] = other;
