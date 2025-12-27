@@ -1,0 +1,67 @@
+{
+  "textures": [
+    {
+      "image": "animal_sprite.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 96,
+        "h": 16
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "frame-1.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 16, "h": 16 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+          "frame": { "x": 0, "y": 0, "w": 16, "h": 16 }
+        },
+        {
+          "filename": "frame-2.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 16, "h": 16 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+          "frame": { "x": 16, "y": 0, "w": 16, "h": 16 }
+        },
+        {
+          "filename": "frame-3.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 16, "h": 16 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+          "frame": { "x": 32, "y": 0, "w": 16, "h": 16 }
+        },
+        {
+          "filename": "frame-4.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 16, "h": 16 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+          "frame": { "x": 48, "y": 0, "w": 16, "h": 16 }
+        },
+        {
+          "filename": "frame-5.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 16, "h": 16 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+          "frame": { "x": 64, "y": 0, "w": 16, "h": 16 }
+        },
+        {
+          "filename": "frame-6.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 16, "h": 16 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+          "frame": { "x": 80, "y": 0, "w": 16, "h": 16 }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.5"
+  }
+}
