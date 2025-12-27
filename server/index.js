@@ -1,11 +1,14 @@
 const express = require('express');
 const app = express();
+const dotenv=require("dotenv");
 const { Server } = require('socket.io');
 const http = require('http');
 const server = http.createServer(app);
+dotenv.config();
 const io = new Server(server, {
-  cors: { origin: "*" }
+  cors: { origin: [process.env.Url,"http://localhost:5173"] }
 });
+
 
 const players = {};
 const spawn = [
