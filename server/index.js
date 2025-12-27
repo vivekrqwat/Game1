@@ -6,7 +6,17 @@ const http = require('http');
 const server = http.createServer(app);
 dotenv.config();
 const io = new Server(server, {
-  cors: { origin: [process.env.Url,"http://localhost:5173"] }
+  cors: { 
+    origin: process.env.URL 
+      ? [process.env.URL, "http://localhost:5173"]
+      : ["http://localhost:5173"],  // Fallback for local dev
+    methods: ["GET", "POST"],
+    credentials: true
+  },
+  // Production optimizations
+  pingTimeout: 60000,
+  pingInterval: 25000,
+  transports: ['websocket', 'polling']
 });
 
 
