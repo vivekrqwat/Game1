@@ -88,7 +88,7 @@ secondaryloadingasset(){
 
 
   loadcriticalasseet(){
-    this.load.audio("bgmusic",asset("../resources/Audio/19-Town.mp3"))
+    // this.load.audio("bgmusic",asset("../resources/Audio/19-Town.mp3"))
 
      this.load.atlas(
       'boy',

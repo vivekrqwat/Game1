@@ -21,11 +21,11 @@ export default class Game extends Phaser.Scene {
 
 
   create() {
-this.audio=this.sound.add('bgmusic',{
-  loop:true,
-  volume:0.4
-})
-this.audio.play();
+// this.audio=this.sound.add('bgmusic',{
+//   loop:true,
+//   volume:0.4
+// })
+// this.audio.play();
 
 
     
