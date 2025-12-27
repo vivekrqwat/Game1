@@ -70,11 +70,11 @@ function GamePlay() {
     setInputValue("");
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      handleSendMessage();
-    }
-  };
+  // const handleKeyPress = (e) => {
+  //   if (e.key === "Enter") {
+  //     handleSendMessage();
+  //   }
+  // };
   useEffect(() => {
     const game = new Phaser.Game(config);
     gameRef.current=game
@@ -128,7 +128,7 @@ function GamePlay() {
             placeholder="Type your message..."
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            onKeyPress={handleKeyPress}
+            // onKeyPress={handleKeyPress}
             style={{
               flex: 1,
               padding: "12px",
