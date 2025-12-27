@@ -244,7 +244,7 @@ export default class Preload extends Phaser.Scene {
     this.load.tilemapTiledJSON("bd", "/assets/Maps/newmap2.json");
     this.load.image("tile2", "/assets/Tileset/newtille.webp");
     this.load.image("tile3", "/assets/Tileset/Props.webp");
-
+    this.load.audio("bgmusic","/assets/Audio/19-Town.mp3");
     // Optional: Uncomment to add background music
     // this.load.audio("bgmusic", "/assets/audio/19-Town.mp3");
   }
