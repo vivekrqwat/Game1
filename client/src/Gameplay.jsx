@@ -3,6 +3,7 @@ import Phaser from "phaser";
 import config from "./phaser/Main"
 import { io } from "socket.io-client";
 import { useState, useRef } from "react";
+import.meta.env.VITE_API_URL
 function GamePlay() {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -21,7 +22,7 @@ function GamePlay() {
 
   useEffect(() => {
     // Connect to socket
-    const newSocket = io("http://localhost:3000");
+    const newSocket = io(import.meta.env.VITE_API_URL);
     setSocket(newSocket);
 
     // Listen for chat messages
