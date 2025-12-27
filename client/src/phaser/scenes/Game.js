@@ -37,44 +37,49 @@ export default class Game extends Phaser.Scene {
     this.createmap()
     //layers setup
     this.createlayer();
-     this.chickenspwaned=true;
-      this.chick= this.physics.add.sprite(1200,700,'chicken','frame-1.png');
-        this.anims.create({
-        key:'chick-walk',
-        frames:this.anims.generateFrameNames('chicken',{start:1,end:3,prefix:'frame-',suffix:'.png'}),
-        frameRate:8,
-        repeat:-1
-       })
+//      this.chickenspwaned=true;
+//       this.chick= this.physics.add.sprite(1200,700,'chicken','frame-1.png');
+//         this.anims.create({
+//         key:'chick-walk',
+//         frames:this.anims.generateFrameNames('chicken',{start:1,end:3,prefix:'frame-',suffix:'.png'}),
+//         frameRate:8,
+//         repeat:-1
+//        })
 
-       this.chicken=this.add.group();
-       const chick1=new Chicken(this,1200,700,'chicken','left');
-        const chick2=new Chicken(this,1300,720,'chicken','right');
+//        this.chicken=this.add.group();
+//        const chick1=new Chicken(this,1200,700,'chicken','left');
+//         const chick2=new Chicken(this,1300,720,'chicken','right');
 
-       this.chicken.add(chick1);
-            this.chicken.add(chick2);
+//        this.chicken.add(chick1);
+//             this.chicken.add(chick2);
 
 
 
-  // Load the atlas
+//   // Load the atlas
   
-  this.anims.create({
-  key: 'cow-walk',
-  frames: this.anims.generateFrameNames('cow', {
-    start: 1,
-    end: 6,
-    prefix: 'walk-',
-    suffix: '.png'
-  }),
-  frameRate: 10,
-  repeat: -1
-});
-this.cow=this.physics.add.group();
-const cow1=new Cow(this,900,900,"cow","left");
-const cow2=new Cow(this,1500,800,"cow","right");
-this.cow.add(cow1)
-this.cow.add(cow2)
+//   this.anims.create({
+//   key: 'cow-walk',
+//   frames: this.anims.generateFrameNames('cow', {
+//     start: 1,
+//     end: 6,
+//     prefix: 'walk-',
+//     suffix: '.png'
+//   }),
+//   frameRate: 10,
+//   repeat: -1
+// });
+// this.cow=this.physics.add.group();
+// const cow1=new Cow(this,900,900,"cow","left");
+// const cow2=new Cow(this,1500,800,"cow","right");
+// this.cow.add(cow1)
+// this.cow.add(cow2)
 
 
+this.createAnimalAnimations();
+  
+  // 3. NOW create the animals (they can safely play animations)
+  this.createChickens();
+  this.createCows();
 
 
 
@@ -361,6 +366,59 @@ console.log(dx,dy);
     //    this.chicken.add(chick1);
     //         this.chicken.add(chick2);
     //  }
+
+
+
+    
+createAnimalAnimations() {
+  // Chicken animation
+  if (!this.anims.exists('chick-walk')) {
+    this.anims.create({
+      key: 'chick-walk',
+      frames: this.anims.generateFrameNames('chicken', {
+        start: 1,
+        end: 3,
+        prefix: 'frame-',
+        suffix: '.png'
+      }),
+      frameRate: 8,
+      repeat: -1
+    });
+  }
+  
+  // Cow animation
+  if (!this.anims.exists('cow-walk')) {
+    this.anims.create({
+      key: 'cow-walk',
+      frames: this.anims.generateFrameNames('cow', {
+        start: 1,
+        end: 6,
+        prefix: 'walk-',
+        suffix: '.png'
+      }),
+      frameRate: 10,
+      repeat: -1
+    });
+  }
+}
+
+// NEW METHOD: Create chickens
+createChickens() {
+  this.chicken = this.add.group();
+  const chick1 = new Chicken(this, 1200, 700, 'chicken', 'left');
+  const chick2 = new Chicken(this, 1300, 720, 'chicken', 'right');
+  this.chicken.add(chick1);
+  this.chicken.add(chick2);
+}
+
+// NEW METHOD: Create cows
+createCows() {
+  this.cow = this.physics.add.group();
+  const cow1 = new Cow(this, 900, 900, "cow", "left");
+  const cow2 = new Cow(this, 1500, 800, "cow", "right");
+  this.cow.add(cow1);
+  this.cow.add(cow2);
+}
 
 
 }
