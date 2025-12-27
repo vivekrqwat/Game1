@@ -52,7 +52,7 @@ export default class Preload extends Phaser.Scene {
 
 
       this.loadcriticalasseet();
-        this.secondaryloadingasset();
+        // this.secondaryloadingasset();
 
 
       
@@ -72,16 +72,16 @@ export default class Preload extends Phaser.Scene {
 
 
 
-secondaryloadingasset(){
-      this.load.atlas('chicken',asset("../resources/animal/Chicken/Chicken.png"),asset("../resources/animal/Chicken/chicktexture.json"))
-            this.load.atlas('cow',asset("../resources/animal/cow/Cow.png"),asset("../resources/animal/cow/Cowtexture.json"))
-      this.load.atlas('boy',asset("../resources/char/sam.png"),asset("../resources/char/samtexture.json"))
-      // this.load.once("complete",()=>{
-      //   this.game.events.emit('seconadryasset')
-      // })
-      // this.load.start();
+// secondaryloadingasset(){
+//       // this.load.atlas('chicken',asset("../resources/animal/Chicken/Chicken.png"),asset("../resources/animal/Chicken/chicktexture.json"))
+//       //       this.load.atlas('cow',asset("../resources/animal/cow/Cow.png"),asset("../resources/animal/cow/Cowtexture.json"))
+//       // this.load.atlas('boy',asset("../resources/char/sam.png"),asset("../resources/char/samtexture.json"))
+//       // this.load.once("complete",()=>{
+//       //   this.game.events.emit('seconadryasset')
+//       // })
+//       // this.load.start();
 
-}
+// }
 
 
 
@@ -118,5 +118,8 @@ secondaryloadingasset(){
     this.load.tilemapTiledJSON("bd", asset("../Maps/newmap2.json"));
     this.load.image("tile2", asset("../resources/Tileset/newtille.webp")); // Only once!
     this.load.image("tile3", asset("../resources/Tileset/Props.webp"));
+          this.load.atlas('chicken',asset("../resources/animal/Chicken/Chicken.png"),asset("../resources/animal/Chicken/chicktexture.json"))
+            this.load.atlas('cow',asset("../resources/animal/cow/Cow.png"),asset("../resources/animal/cow/Cowtexture.json"))
+      this.load.atlas('boy',asset("../resources/char/sam.png"),asset("../resources/char/samtexture.json"))
 }
 }
