@@ -87,22 +87,36 @@ secondaryloadingasset(){
 
 
 
-  loadcriticalasseet(){
-    // this.load.audio("bgmusic",asset("../resources/Audio/19-Town.mp3"))
+  // loadcriticalasseet(){
+  //   // this.load.audio("bgmusic",asset("../resources/Audio/19-Town.mp3"))
 
-     this.load.atlas(
+  //    this.load.atlas(
+  //     'boy',
+  //     asset("../resources/char/sam.png"),
+  //     asset("../resources/char/samtexture.json")
+  //   );
+
+  //   // Main tilemap and tileset
+  //   this.load.tilemapTiledJSON("bd", asset("../Maps/newmap2.json"));
+  //   this.load.image("tile2", asset("../resources/Tileset/newtille.webp"));
+  //       this.load.image("tile2",asset("../resources/Tileset/newtille.webp"));
+  //   this.load.image("tile3",asset("../resources/Tileset/Props.webp"))
+  //   // Secondary tileset (if needed for initial view)
+  //   this.load.image("tile3", asset("../resources/Tileset/Props.webp"));
+
+  // }
+
+
+
+  loadcriticalasseet(){
+    this.load.atlas(
       'boy',
       asset("../resources/char/sam.png"),
       asset("../resources/char/samtexture.json")
     );
 
-    // Main tilemap and tileset
     this.load.tilemapTiledJSON("bd", asset("../Maps/newmap2.json"));
-    this.load.image("tile2", asset("../resources/Tileset/newtille.webp"));
-        this.load.image("tile2",asset("../resources/Tileset/newtille.webp"));
-    this.load.image("tile3",asset("../resources/Tileset/Props.webp"))
-    // Secondary tileset (if needed for initial view)
+    this.load.image("tile2", asset("../resources/Tileset/newtille.webp")); // Only once!
     this.load.image("tile3", asset("../resources/Tileset/Props.webp"));
-
-  }
+}
 }
