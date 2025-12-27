@@ -73,7 +73,7 @@ export default class Game extends Phaser.Scene {
 // const cow2=new Cow(this,1500,800,"cow","right");
 // this.cow.add(cow1)
 // this.cow.add(cow2)
-
+  console.log(this.map)
 
 this.createAnimalAnimations();
   
@@ -132,6 +132,7 @@ this.createAnimalAnimations();
     this.physics.add.collider(this.player, this.forest);
     this.physics.add.collider(this.player, this.house);
       this.physics.add.collider(this.player, this.grass);
+    
      
         this.physics.add.collider(this.player,this.newset,(player,tile)=>{
           console.log("t")
