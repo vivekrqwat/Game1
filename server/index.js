@@ -5,6 +5,7 @@ const { Server } = require('socket.io');
 const http = require('http');
 const server = http.createServer(app);
 dotenv.config();
+console.log("k",process.env.URL)
 const io = new Server(server, {
   cors: { 
     origin: process.env.URL 
